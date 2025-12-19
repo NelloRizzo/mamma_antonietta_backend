@@ -1,11 +1,11 @@
-import express, { type Request, type Response } from 'express';
+import express, { type Request, type Response, type Application } from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import pool from './db.js';
 import { type Order, type Product } from './types.js';
 
-const app = express();
+const app: Application = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
