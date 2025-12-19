@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 
 // --- API ROUTES ---
-app.get('/api/test', (req, res) => {
+app.get('/api/test', (req: Request, res: Response) => {
     res.json({ message: "Il server risponde correttamente!" });
 });
 
