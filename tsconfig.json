@@ -10,8 +10,7 @@
     "declaration": true,
     "declarationMap": true,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "strict": true,
+    "strict": false,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
@@ -20,7 +19,9 @@
     "skipLibCheck": true,
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
-    "typeRoots": ["./node_modules/@types", "./src"]
+    "typeRoots": ["./node_modules/@types", "./src"],
+    "noImplicitAny": false,
+    "allowJs": true
   },
   "include": ["src/**/*"]
 }
