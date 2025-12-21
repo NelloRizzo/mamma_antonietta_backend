@@ -29,7 +29,7 @@ app.get('/api/products', async (_req: Request, res: Response) => {
         const { rows } = await pool.query<Product>('SELECT * FROM products ORDER BY id');
         res.json(rows);
     } catch (err) {
-        res.status(500).json({ error: 'Errore nel recupero prodotti' });
+        res.status(500).json({ error: 'Errore nel recupero prodotti', internalError: err });
     }
 });
 
